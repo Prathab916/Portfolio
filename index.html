@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prathab — Cloud Security &amp; AI/ML for Cybersecurity</title>
+<meta name="description" content="Portfolio of cloud security, threat hunting, digital forensics, applied cryptography, application security, and AI/ML-for-security lab work, plus a production full-stack app.">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:,">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="brand">
+      <span class="brand-mark">&gt;_</span>
+      <span class="brand-text">Prathab</span>
+    </div>
+    <nav>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#labs">Labs</a>
+      <a href="#about">About</a>
+      <a href="https://github.com/Prathab916" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <p class="eyebrow">Cloud Security &amp; AI/ML for Cybersecurity</p>
+    <h1>Securing cloud infrastructure, hunting threats, and applying ML to security problems.</h1>
+    <p class="hero-sub">
+      M.Tech in Cybersecurity Engineering, with hands-on work spanning AWS security,
+      SIEM-based threat hunting, digital forensics, applied cryptography, web application
+      security, and machine learning for malware and fraud detection.
+    </p>
+    <div class="hero-stats">
+      <div class="stat"><span class="stat-num">27</span><span class="stat-label">Labs documented</span></div>
+      <div class="stat"><span class="stat-num">7</span><span class="stat-label">Security domains</span></div>
+      <div class="stat"><span class="stat-num">1</span><span class="stat-label">Live production app</span></div>
+    </div>
+  </div>
+</section>
+
+<main class="container">
+
+  <section id="skills" class="section">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <h3>Cloud &amp; Container</h3>
+        <div class="chip-row">
+          <span class="chip">AWS IAM</span>
+          <span class="chip">VPC</span>
+          <span class="chip">S3 / EC2</span>
+          <span class="chip">Docker</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3>Threat Hunting &amp; DFIR</h3>
+        <div class="chip-row">
+          <span class="chip">Wazuh</span>
+          <span class="chip">Wireshark</span>
+          <span class="chip">Autopsy</span>
+          <span class="chip">FTK Imager</span>
+          <span class="chip">VirusTotal</span>
+          <span class="chip">Shodan</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3>AppSec &amp; Network</h3>
+        <div class="chip-row">
+          <span class="chip">SQLi / XSS / CSRF</span>
+          <span class="chip">Scapy</span>
+          <span class="chip">iptables</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3>AI/ML for Security</h3>
+        <div class="chip-row">
+          <span class="chip">scikit-learn</span>
+          <span class="chip">PyTorch</span>
+          <span class="chip">XGBoost</span>
+          <span class="chip">pandas</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3>Languages</h3>
+        <div class="chip-row">
+          <span class="chip">Python</span>
+          <span class="chip">PowerShell</span>
+          <span class="chip">Bash</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="project-card">
+      <h3>Wardrobe — private closet catalog</h3>
+      <p class="lab-summary">
+        Upload a photo or paste a product link, auto-detect the dominant color, tag the
+        type, and search "blue top" later. Built and deployed solo, end to end —
+        including provisioning the VM and cutting its TLS certificate.
+      </p>
+      <div class="chip-row">
+        <span class="chip">Node.js / Express</span>
+        <span class="chip">SQLite</span>
+        <span class="chip">nginx + Let's Encrypt</span>
+        <span class="chip">Multi-user, SSRF-guarded</span>
+      </div>
+      <div class="project-links">
+        <a class="btn btn-primary" href="https://wardrobe.prathab.in" target="_blank" rel="noopener">Live site ↗</a>
+        <a class="btn" href="https://github.com/Prathab916/chapter-61" target="_blank" rel="noopener">Source ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="labs" class="section">
+    <h2>Labs</h2>
+    <p class="section-sub">Hands-on labs from an M.Tech Cybersecurity program, grouped by domain.</p>
+
+    <nav class="domain-nav">
+      <a href="#hunt">Threat Hunting</a>
+      <a href="#cloud">Cloud Security</a>
+      <a href="#aiml">AI/ML for Security</a>
+      <a href="#forensics">Digital Forensics</a>
+      <a href="#crypto">Applied Cryptography</a>
+      <a href="#appsec">Web App Security</a>
+      <a href="#network">Network Security</a>
+    </nav>
+
+    <div class="domain-block" id="hunt">
+      <div class="domain-heading"><h3>Threat Hunting &amp; Detection</h3></div>
+      <div class="lab-grid">
+        <article class="lab-card">
+          <span class="lab-tag tag-siem">Hunt</span>
+          <h3>DNS Resolution Monitoring</h3>
+          <p class="lab-summary">CAA-record analysis for TLS-interception detection, plus a passive-DNS hunt for the SolarWinds/SUNBURST C2 domain.</p>
+          <div class="chip-row"><span class="chip">dig</span><span class="chip">Passive DNS</span></div>
+        </article>
+        <article class="lab-card">
+          <span class="lab-tag tag-siem">Hunt</span>
+          <h3>DNS Threat Analysis</h3>
+          <p class="lab-summary">tshark-driven pcap analysis that surfaced a live phishing domain impersonating a major Chilean bank, confirmed against real query traffic.</p>
+          <div class="chip-row"><span class="chip">tshark</span><span class="chip">Wireshark</span></div>
+        </article>
+        <article class="lab-card">
+          <span class="lab-tag tag-siem">Hunt</span>
+          <h3>Wazuh Threat Hunting</h3>
+          <p class="lab-summary">Hunted brute-force logons, a port scan, and malware alerts by querying Wazuh's indexer API directly with curl.</p>
+          <div class="chip-row"><span class="chip">Wazuh</span><span class="chip">OpenSearch</span></div>
+        </article>
+        <article class="lab-card">
+          <span class="lab-tag tag-siem">Hunt</span>
+          <h3>Threat Intel: VirusTotal &amp; Shodan</h3>
+          <p class="lab-summary">Traced a malicious hash to the SystemBC backdoor trojan, then pivoted to Shodan to profile its C2 infrastructure.</p>
+          <div class="chip-row"><span class="chip">VirusTotal</span><span class="chip">Shodan</span></div>
+        </article>
+      </div>
+    </div>
+
+    <div class="domain-block" id="cloud">
+      <div class="domain-heading"><h3>Cloud Security</h3></div>
+      <div class="lab-grid">
+        <article class="lab-card">
+          <span class="lab-tag tag-cloud">Cloud</span>
+          <h3>AWS Environment &amp; IAM Setup</h3>
+          <p class="lab-summary">Stood up a Kali attack VM and AWS account with scoped IAM access keys.</p>
+          <div class="chip-row"><span class="chip">AWS IAM</span><span class="chip">Kali Linux</span></div>
+        </article>
+        <article class="lab-card">
+          <span class="lab-tag tag-cloud">Cloud</span>
+          <h3>VPC &amp; Network Architecture</h3>
+          <p class="lab-summary">Built a segmented AWS network: public/private subnets across two AZs, a NAT gateway, and a default-deny NACL.</p>
+          <div class="chip-row"><span class="chip">VPC</span><span class="chip">NACLs</span></div>
+        </article>
+        <article class="lab-card">
+          <span class="lab-tag tag-cloud">Cloud</span>
+          <h3>AWS Misconfigurations (flaws.cloud)</h3>
+          <p class="lab-summary">Worked the well-known flaws.cloud series: public S3 buckets, leaked git credentials, EC2 metadata SSRF, and an over-permissioned IAM policy.</p>
+          <div class="chip-row"><span class="chip">AWS CLI</span><span class="chip">S3</span><span class="chip">IAM</span></div>
+        </article>
+        <article class="lab-card">
+          <span class="lab-tag tag-cloud">Cloud</span>
+          <h3>Docker Container Security</h3>
+          <p class="lab-summary">Built and published Docker images, then demonstrated the supply-chain risk by containerizing a keylogger and capturing live keystrokes from it.</p>
+          <div class="chip-row"><span class="chip">Docker</span><span class="chip">Docker Hub</span></div>
+        </article>
+      </div>
+    </div>
+
+    <div class="domain-block" id="aiml">
+      <div class="domain-heading"><h3>AI/ML for Cybersecurity</h3></div>
+      <div class="lab-grid">
+        <article class="lab-card">
+          <span class="lab-tag tag-aiml">AI/ML</span>
+          <h3>Colab &amp; ML Fundamentals</h3>
+          <p class="lab-summary">Compared SVM, Decision Tree, KNN, and Naive Bayes on IoT device classification, plus a manual PyTorch linear regression.</p>
+          <div class="chip-row"><span class="chip">scikit-learn</span><span class="chip">PyTorch</span></div>
+        </article>
+        <article class="lab-card">
+          <span class="lab-tag tag-aiml">AI/ML</span>
+          <h3>Phishing Website Detection</h3>
+          <p class="lab-summary">Decision Tree vs. Random Forest on 11,430 URLs, tuned via grid search. Random Forest reached 96% accuracy, 0.99 ROC-AUC.</p>
+          <div class="chip-row"><span class="chip">scikit-learn</span></div>
+        </article>
+        <article class="lab-card">
+          <span class="lab-tag tag-aiml">AI/ML</span>
+          <h3>Online Payment Fraud Detection</h3>
+          <p class="lab-summary">Four models on 2.5M+ transactions at a 0.13% fraud rate. Random Forest hit 100% precision, 99.4% recall.</p>
+          <div class="chip-row"><span class="chip">scikit-learn</span><span class="chip">XGBoost</span></div>
+        </article>
+        <article class="lab-card">
+          <span class="lab-tag tag-aiml">AI/ML</span>
+          <h3>Static Android Malware Analysis</h3>
+          <p class="lab-summary">Five models classifying apps by permissions — the simplest one (Logistic Regression) won, missing only 2 of 42 malware apps.</p>
+          <div class="chip-row"><span class="chip">scikit-learn</span><span class="chip">Keras</span></div>
+        </article>
+        <article class="lab-card">
+          <span class="lab-tag tag-aiml">AI/ML</span>
+          <h3>K-Means Malware Clustering</h3>
+          <p class="lab-summary">Unsupervised clustering of 9,932 unlabeled PE files, validated with silhouette scores and a feature-redundancy stress test.</p>
+          <div class="chip-row"><span class="chip">scikit-learn</span></div>
+        </article>
+      </div>
+    </div>
+
+    <div class="domain-block" id="forensics">
+      <div class="domain-heading"><h3>Digital Forensics</h3></div>
+      <div class="lab-grid">
+        <article class="lab-card">
+          <span class="lab-tag tag-forensics">DFIR</span>
+          <h3>Disk Acquisition (FTK Imager)</h3>
+          <p class="lab-summary">Acquired and hash-verified a forensic image of an 8GB drive, weighing logical vs. physical imaging and format trade-offs.</p>
+          <div class="chip-row"><span class="chip">FTK Imager</span><span class="chip">dd</span></div>
+        </article>
+        <article class="lab-card">
+          <span class="lab-tag tag-forensics">DFIR</span>
+          <h3>Case Investigation (Autopsy)</h3>
+          <p class="lab-summary">Full forensic workup of a suspect disk image: registry analysis, deleted files, malware indicators, browser history.</p>
+          <div class="chip-row"><span class="chip">Autopsy</span></div>
+        </article>
+        <article class="lab-card">
+          <span class="lab-tag tag-forensics">DFIR</span>
+          <h3>Deleted-Data Recovery &amp; Carving</h3>
+          <p class="lab-summary">Recovered deleted evidence across four seized drives — including manually carving a PDF from raw hex signatures.</p>
+          <div class="chip-row"><span class="chip">Photorec</span><span class="chip">Hex editor</span></div>
+        </article>
+        <article class="lab-card">
+          <span class="lab-tag tag-forensics">DFIR</span>
+          <h3>Colonial Pipeline Case Study</h3>
+          <p class="lab-summary">Incident-response critique of the 2021 ransomware attack — what failed, and the controls that would've prevented it.</p>
+          <div class="chip-row"><span class="chip">Incident Response</span></div>
+        </article>
+      </div>
+    </div>
+
+    <div class="domain-block" id="crypto">
+      <div class="domain-heading"><h3>Applied Cryptography</h3></div>
+      <div class="lab-grid">
+        <article class="lab-card">
+          <span class="lab-tag tag-crypto">Crypto</span>
+          <h3>MD5 Collision Attacks</h3>
+          <p class="lab-summary">Generated real MD5 collisions — including two executables that share a hash but run different code.</p>
+          <div class="chip-row"><span class="chip">Hash collisions</span></div>
+        </article>
+        <article class="lab-card">
+          <span class="lab-tag tag-crypto">Crypto</span>
+          <h3>SHA-256 Length-Extension Attack</h3>
+          <p class="lab-summary">Forged a valid MAC against a naive keyed hash construction, then verified HMAC closes the hole.</p>
+          <div class="chip-row"><span class="chip">HMAC</span></div>
+        </article>
+      </div>
+    </div>
+
+    <div class="domain-block" id="appsec">
+      <div class="domain-heading"><h3>Web Application Security</h3></div>
+      <div class="lab-grid">
+        <article class="lab-card">
+          <span class="lab-tag tag-appsec">AppSec</span>
+          <h3>SQL Injection</h3>
+          <p class="lab-summary">Bypassed login and hijacked another user's account via UPDATE-statement injection, then fixed it with prepared statements.</p>
+          <div class="chip-row"><span class="chip">MySQL</span><span class="chip">PHP</span></div>
+        </article>
+        <article class="lab-card">
+          <span class="lab-tag tag-appsec">AppSec</span>
+          <h3>Cross-Site Scripting (XSS)</h3>
+          <p class="lab-summary">Recreated the 2005 Samy MySpace worm — cookie theft, forged requests, and a self-propagating XSS worm.</p>
+          <div class="chip-row"><span class="chip">Elgg</span><span class="chip">JavaScript</span></div>
+        </article>
+        <article class="lab-card">
+          <span class="lab-tag tag-appsec">AppSec</span>
+          <h3>Cross-Site Request Forgery (CSRF)</h3>
+          <p class="lab-summary">Forged GET and POST requests to hijack a profile, then verified secret-token and SameSite-cookie defenses actually stop it.</p>
+          <div class="chip-row"><span class="chip">Elgg</span></div>
+        </article>
+      </div>
+    </div>
+
+    <div class="domain-block" id="network">
+      <div class="domain-heading"><h3>Network Security</h3></div>
+      <div class="lab-grid">
+        <article class="lab-card">
+          <span class="lab-tag tag-network">Network</span>
+          <h3>Packet Sniffing &amp; Spoofing</h3>
+          <p class="lab-summary">Wrote sniffers, spoofers, and a traceroute from scratch with Scapy.</p>
+          <div class="chip-row"><span class="chip">Scapy</span></div>
+        </article>
+        <article class="lab-card">
+          <span class="lab-tag tag-network">Network</span>
+          <h3>Firewall Internals (iptables/Netfilter)</h3>
+          <p class="lab-summary">Built a firewall as a kernel module, then reproduced it with iptables — stateless, stateful, and rate-limited rules.</p>
+          <div class="chip-row"><span class="chip">iptables</span><span class="chip">LKM</span></div>
+        </article>
+        <article class="lab-card">
+          <span class="lab-tag tag-network">Network</span>
+          <h3>ARP Cache Poisoning &amp; MITM</h3>
+          <p class="lab-summary">Poisoned ARP caches three ways, then intercepted and altered live Telnet traffic.</p>
+          <div class="chip-row"><span class="chip">Scapy</span><span class="chip">tcpdump</span></div>
+        </article>
+        <article class="lab-card">
+          <span class="lab-tag tag-dns">DNS</span>
+          <h3>DNS-over-HTTPS &amp; TLS Analysis</h3>
+          <p class="lab-summary">Decrypted DoH sessions with TLS session keys to compare plaintext vs. encrypted DNS visibility.</p>
+          <div class="chip-row"><span class="chip">Wireshark</span></div>
+        </article>
+        <article class="lab-card">
+          <span class="lab-tag tag-http">HTTP</span>
+          <h3>HTTP/1.1 vs. HTTP/2 vs. HTTP/3</h3>
+          <p class="lab-summary">Reconstructed HTTP/1.1 conversations, then decrypted TLS 1.3 to compare HTTP/2 and HTTP/3 multiplexing.</p>
+          <div class="chip-row"><span class="chip">TLS 1.3</span></div>
+        </article>
+      </div>
+    </div>
+
+  </section>
+
+  <section id="about" class="section about-section">
+    <h2>About</h2>
+    <p>
+      I'm pursuing an M.Tech in Cybersecurity Engineering, building on a background in
+      cybersecurity risk, compliance, and cloud security. My focus is the intersection of
+      cloud infrastructure security, threat detection, and applying machine learning to
+      security problems.
+    </p>
+    <p>Certifications: Certified Ethical Hacker (CEH), AWS Certified Cloud Practitioner.</p>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>
+      <a href="mailto:prathab916@gmail.com">Email</a> ·
+      <a href="https://github.com/Prathab916" target="_blank" rel="noopener">GitHub</a> ·
+      <a href="https://linkedin.com/in/prathabs" target="_blank" rel="noopener">LinkedIn</a>
+    </p>
+    <p>&copy; 2026 Prathab. Built with plain HTML/CSS, hosted on GitHub Pages.</p>
+  </div>
+</footer>
+
+</body>
+</html>
